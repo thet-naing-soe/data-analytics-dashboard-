@@ -20,9 +20,6 @@ body {
   margin: 1em 0.5em;
   height: calc(100% - 2em);
 }
-nav {
-  display: none;
-}
 section {
   background: #2c2931 url("images/bg.jpg");
   background-size: cover;
@@ -92,4 +89,46 @@ h1 {
 .cta:focus {
   background: var(--primary-color);
   border: none;
+}
+nav {
+  position: fixed;
+  background: #221F26;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-width: 300px;
+  z-index: 1;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+nav ul li {
+  width: 100%;
+}
+nav ul li a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: .875em 5em .875em 4em;
+}
+nav ul li a:not(:last-child):hover {
+  background: #413E47;
+}
+.active {
+  background: var(--primary-color);
+}
+.active:hover {
+  opacity: .9;
+}
+.back-btn {
+  transform: scaleX(-1);
+  padding: 3em 4em 2em;
+  cursor: pointer;
+  transition: transform .3s;
+}
+.back-btn:hover {
+  transform: scaleX(-1) translateX(6px);
 }
